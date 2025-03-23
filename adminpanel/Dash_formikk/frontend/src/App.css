@@ -1,0 +1,56 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+body {
+    width: 100%;
+    overflow-x: hidden; /* To prevent horizontal overflow */
+   display: flex;
+   flex-direction: column;
+    height: 100vh;
+}
+
+main {
+  flex-grow: 1; /* Takes all available space */
+}
+
+/* Light theme (default) */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Dark theme */
+body.dark {
+  background-color: #cadbb4;
+  color: white;
+}
+
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.custom-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.custom-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
