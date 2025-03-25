@@ -13,7 +13,7 @@ Connectdb();
 import cors from 'cors';
 
 app.use(cors({
-    origin:[process.env.Frontend_URL],
+    origin:[3000],
     methods: ['GET', 'POST', 'PUT', 'DELETE','PATCH', 'OPTIONS'], // Allow these methods
     credentials:true
 }));
@@ -26,13 +26,13 @@ app.use(express.urlencoded({extended:true}))
 //???import routtes file 
 
 import adminroutes  from './routes/adminroutes.js'
-// import jobsroute from './routes/jobsroute.js'
+import colorroute from './routes/colorroute.js'
 // import errormiddleware from './middleware/errormiddleware.js';
 // import applicationroute from './routes/applicationroute.js' 
 
 // //!!!!    routing 
-app.use('/api/v1/reg', adminroutes)  
-// app.use('/api/v1/job', jobsroute);   
+app.use('/api', adminroutes)  
+app.use('/api', colorroute);   
 // app.use("/api/v1/application",applicationroute);
 
 

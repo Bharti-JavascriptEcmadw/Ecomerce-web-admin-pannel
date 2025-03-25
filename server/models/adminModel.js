@@ -22,10 +22,7 @@ password:{
     required:[true,'password is required '],
     select:true
 },
-phone:{
-    type:Number,
-    // required:[true, "please provide phone number"]
-},
+
 },
 {timestamps:true}
 );
@@ -54,4 +51,4 @@ userSchema.methods.createJWT=function(){
     return JWT.sign({userID:this._id},process.env.JWT_SECRET,{expiresIn:'2d'}
     )
 }
-export default mongoose.model("Admin", userSchema)
+export default mongoose.model("User", userSchema)
